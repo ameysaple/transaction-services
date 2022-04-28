@@ -22,7 +22,9 @@ const ruleSet = () => {
             }),
         body('endDate', 'End Date Required').exists({checkNull: true, checkFalsy: true}).isDate({format: 'yyyy-mm-dd'}),
         body('cashback', 'Cashback Required').exists({checkNull: true, checkFalsy: true}).isInt(),
-        body('redemptionLimit', 'Invalid Redemption Limit').exists({checkNull: true, checkFalsy: true}).isInt()
+        body('redemptionLimit', 'Invalid Redemption Limit').exists({checkNull: true, checkFalsy: true}).isInt(),
+        body('budget', 'Invalid Budget').exists({checkNull: true, checkFalsy: true}).isInt(),
+        body('minTransactions', 'Invalid Minimum Transaction').exists({checkNull: true, checkFalsy: true}).isInt()
     ]
 };
 

@@ -1,12 +1,14 @@
 import RuleSetModel from "../../db/schemas/ruleset";
 
-const addRuleSet = async (startDate: Date, endDate: Date, cashback: Number, redemptionLimit: Number) => {
+const addRuleSet = async (startDate: Date, endDate: Date, cashback: Number, redemptionLimit: Number, budget: Number, minTransactions: Number) => {
     try {
         const ruleSetInstance = new RuleSetModel({
             startDate: startDate,
             endDate: endDate,
             cashback: cashback,
-            redemptionLimit: redemptionLimit
+            redemptionLimit: redemptionLimit,
+            budget: budget, 
+            minTransactions: minTransactions
         });
 
         return await ruleSetInstance.save();
