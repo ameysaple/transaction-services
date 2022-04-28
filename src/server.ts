@@ -6,6 +6,7 @@ import config from './config';
 import { errorHandler } from './middleware/error.middleware';
 import routes from './routes';
 import { DB } from './db';
+import colors from 'colors';
 
 export class Application {
     public static readonly PORT: number = config.port;
@@ -46,9 +47,12 @@ export class Application {
     }
 
     private listen() {
-        this.server.listen(this.port, () => {
-            console.log(`Web Server [] running on port %s`, this.port);
-        })
+        this.server.listen(this.port, () => console.log('Web server [%s app] listening on server %s port %s and running on %s',
+            colors.green(config.app.name),
+            colors.green(config.host),
+            colors.green(config.port.toString()),
+            colors.green(config.app.environment)
+        ))
     }
 
     get run() {
