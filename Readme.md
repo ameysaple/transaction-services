@@ -5,6 +5,16 @@
 - Node v12
 - MongoDB
 
+#### Update env
+
+```sh
+DB_HOSTNAME=localhost
+DB_DATABASE=test
+DB_USERNAME=
+DB_PASSWORD=
+DB_PORT=27017
+```
+
 ## Installation
 
 Install all the dependencies and Dev dependencies and start the server
