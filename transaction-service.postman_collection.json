@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "e30814bd-0bf3-4588-aaf4-4d4d696d949c",
+		"name": "transaction-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Amey",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Saple",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sapleamey95@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				},
+				"description": "Create Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/ruleset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "startDate",
+							"value": "2022-04-01",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-04-30",
+							"type": "text"
+						},
+						{
+							"key": "cashback",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "redemptionLimit",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "budget",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "minTransactions",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/ruleset",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ruleset"
+					]
+				},
+				"description": "Create RuleSet"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "2022-04-29",
+							"type": "text"
+						},
+						{
+							"key": "customerId",
+							"value": "626a416ebb97d1d25526fc4b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction"
+					]
+				},
+				"description": "Create Transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/cashback/626a416ebb97d1d25526fc4b",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cashback/626a416ebb97d1d25526fc4b",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cashback",
+						"626a416ebb97d1d25526fc4b"
+					]
+				},
+				"description": "Get Cashback"
+			},
+			"response": []
+		}
+	]
+}

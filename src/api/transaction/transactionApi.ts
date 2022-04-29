@@ -1,7 +1,7 @@
-import { ObjectId } from "mongoose";
+import { ObjectId, Schema } from "mongoose";
 import TransactionModel from "../../db/schemas/transaction";
 
-const addTransaction = async (date: Date, customerId: ObjectId) => {
+const addTransaction = async (date: Date, customerId: string) => {
     try {
         const transactionInstance = new TransactionModel({
             date: date,

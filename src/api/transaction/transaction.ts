@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { Schema } from "mongoose";
 import transactionApi from './transactionApi';
 
 const addTransaction = async (request: Request, response: Response, next: NextFunction) => {
